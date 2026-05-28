@@ -72,7 +72,7 @@
     <div class="col col-xl-6">
         <div class="card" *ngIf="accountObservable">
             <div class="card-header">Operations</div>
-            <div class="card-body">
+            <div class="card-body" *ngIf="authService.roles.includes('ADMIN')">
 
                 <form [formGroup]="operationFormGroup" method="post" (ngSubmit)="handleAccountOperation()">
                    <div class="form-check form-check-inline">
